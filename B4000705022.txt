@@ -74,8 +74,11 @@ public class Client {
 }
 
 
-Create the codes as per my GitHub
 
-1) Open terminal navigate to your project and then do cd bin
-2) Type command - mpjrun.bat -np 4 -classpath ".;C:\mpj-v0_44\lib\mpj.jar" ArraySumMPI (For Windows)
-3) And for Ubuntu Linux terminal use this - mpjrun.sh -np 4 ArraySumMPI (file name)
+1) Create file Calc.idl
+2) Open terminal and type command - idlj -fall Calc.idl
+3) The files will be created copy that into new calcApp folder under src folder and also create Server and Client in that along with that also CalcImpl.java file
+4) Open terminal and type command - orbd -ORBInitialPort 1050 -ORBInitialHost localhost
+5) Open new terminal - cd project path and then cd bin and type command - java CalcApp.Server -ORBInitialPort 1050 -ORBInitialHost localhost
+6) Open another terminal - cd project path and then cd bin and type command - java CalcApp.Client -ORBInitialPort 1050 -ORBInitialHost localhost
+
